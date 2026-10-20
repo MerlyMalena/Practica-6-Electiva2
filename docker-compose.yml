@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: mi-servidor-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/usr/share/nginx/html:ro
+    restart: always
